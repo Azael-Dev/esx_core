@@ -58,7 +58,7 @@ Config.EnableDebug = false -- Use Debug options?
 Config.DefaultJobDuty = true -- A players default duty status when changing jobs
 Config.OffDutyPaycheckMultiplier = 0.5 -- The multiplier for off duty paychecks. 0.5 = 50% of the on duty paycheck
 
-Config.Multichar = GetResourceState("esx_multicharacter") ~= "missing"
+Config.Multichar = false -- Enable multicharacter, set to GetResourceState("esx_multicharacter") ~= "missing" for automatic detection
 Config.Identity = true -- Select a character identity data before they have loaded in (this happens by default with multichar)
 Config.DistanceGive = 4.0 -- Max distance when giving items, weapons etc.
 
@@ -72,4 +72,4 @@ if GetResourceState("ox_inventory") ~= "missing" then
 end
 
 Config.EnableDefaultInventory = Config.CustomInventory == false -- Display the default Inventory ( F2 )
-Config.Identifier = GetConvar("esx:identifier", "license")
+Config.Identifier = GetConvar("esx:identifier", "steam")
